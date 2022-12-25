@@ -17,7 +17,10 @@ public class GameManeger : MonoBehaviour
 
     private void Start()
     {
-        Board.instance.SetValue(BoardSetting.xSize,BoardSetting.ySize,BoardSetting.tileGo,BoardSetting.tileSprite);
+        BoardController.instance.SetValue(Board.instance.SetValue(BoardSetting.xSize, BoardSetting.ySize, BoardSetting.tileGo, BoardSetting.tileSprite),
+            BoardSetting.xSize, BoardSetting.ySize,
+            BoardSetting.tileSprite);
+
     }
 
 }
