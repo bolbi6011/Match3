@@ -22,7 +22,7 @@ public class Board : MonoBehaviour
         this.tileSprite = tileSprite;
         return CreateBoard();
     }
-    public Tile[,] CreateBoard()
+    private Tile[,] CreateBoard()
     {
         Tile[,] tileArray = new Tile[xSize, ySize];
         float xPos=transform.position.x;
