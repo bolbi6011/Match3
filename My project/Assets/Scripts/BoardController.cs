@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class BoardController : MonoBehaviour
@@ -154,6 +155,8 @@ public class BoardController : MonoBehaviour
         Sprite cashSprite = oldSelectile.spriteRenderer.sprite;
         oldSelectile.spriteRenderer.sprite = tile.spriteRenderer.sprite;
         tile.spriteRenderer.sprite = cashSprite;
+
+        UI.instance.Moves(1);
     }
     private List<Tile> AdjacentTiles()
     {
@@ -182,7 +185,7 @@ public class BoardController : MonoBehaviour
                     ShiftTileDown(x, y);
                     break;
                 }
-                if (x == xSize && y == ySize)
+                if (x == xSize && y == ySize-1)
                 {
                     isSearchEmptyTile = false;
                 }
@@ -203,15 +206,24 @@ public class BoardController : MonoBehaviour
     {
         isShift = true;
         List<SpriteRenderer> cashRenderer= new List<SpriteRenderer>();
+        int count = 0;
         for (int y = yPos; y < ySize; y++)
         {
             Tile tile = tileArray[xPos,y];
+            if (tile.isEmpty)
+            {
+                count++;
+            }
             
                 cashRenderer.Add(tile.spriteRenderer);
             
         }
-        SetNewSprite(xPos, cashRenderer);
-        isShift= false;
+        for (int i=0; i < count; i++)
+        {
+            UI.instance.Score(50);
+            SetNewSprite(xPos, cashRenderer);
+        }
+         isShift = false;
     }
     private void SetNewSprite(int xPos, List<SpriteRenderer> renderer)
     {
