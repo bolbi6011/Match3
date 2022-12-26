@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 178691458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1785058382}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: RestarScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &178691458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,7 +1103,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1769350096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1785058382}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: SceneLoad
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1769350096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,6 +1167,7 @@ GameObject:
   - component: {fileID: 1785058379}
   - component: {fileID: 1785058378}
   - component: {fileID: 1785058381}
+  - component: {fileID: 1785058382}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1249,6 +1274,18 @@ MonoBehaviour:
   panelGameOver: {fileID: 1863690450}
   gTextScore: {fileID: 268605056}
   gTextBestScore: {fileID: 410518091}
+--- !u!114 &1785058382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785058376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9220558ad06f186459ace4268a0f9003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1863690450
 GameObject:
   m_ObjectHideFlags: 0

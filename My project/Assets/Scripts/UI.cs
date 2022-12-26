@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI : MonoBehaviour
@@ -38,12 +39,15 @@ public class UI : MonoBehaviour
         {
             PlayerPrefs.SetInt("Score", score);
             gTextBestScore.text = "New Best" + score.ToString();
+            
         }
         else
         {
             gTextBestScore.text = " Best" + PlayerPrefs.GetInt("Score");
+            
         }
         gTextScore.text = "Score" + score.ToString();
         panelGameOver.SetActive(true);
     }
+    
 }

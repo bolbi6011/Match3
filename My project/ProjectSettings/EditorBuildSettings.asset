@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 4f3ecb78f58eb6e4eab00547ae6411a0
+  - enabled: 1
+    path: Assets/Scenes/Charapter.unity
+    guid: 79ad99f10e0034e42ad2949f67953726
   m_configObjects: {}
