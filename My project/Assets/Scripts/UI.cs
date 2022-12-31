@@ -11,6 +11,7 @@ public class UI : MonoBehaviour
     private int moves = 10;
 
     public GameObject panelGameOver;
+    public GameObject panelBoard;
     public Text gTextScore, gTextBestScore;
 
     private void Awake()
@@ -39,6 +40,7 @@ public class UI : MonoBehaviour
         {
             PlayerPrefs.SetInt("Score", score);
             gTextBestScore.text = "New Best" + score.ToString();
+
             
         }
         else
@@ -49,5 +51,7 @@ public class UI : MonoBehaviour
         gTextScore.text = "Score" + score.ToString();
         panelGameOver.SetActive(true);
     }
+    
+       
     
 }

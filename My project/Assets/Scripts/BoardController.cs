@@ -220,7 +220,7 @@ public class BoardController : MonoBehaviour
         }
         for (int i=0; i < count; i++)
         {
-            UI.instance.Score(60);
+            UI.instance.Score(10);
             SetNewSprite(xPos, cashRenderer);
         }
          isShift = false;
