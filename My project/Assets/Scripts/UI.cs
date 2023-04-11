@@ -22,7 +22,7 @@ public class UI : MonoBehaviour
     public void Score(int value)
     {
         score += value;
-        textScore.text = "Score"+ score.ToString();
+        textScore.text = ""+ score.ToString();
     }
     public void Moves(int value)
     {
@@ -31,7 +31,7 @@ public class UI : MonoBehaviour
         {
             GameOver();
         }
-        textMoves.text = "Moves" + moves.ToString();
+        textMoves.text = "" + moves.ToString();
     }
     private void GameOver()
 
